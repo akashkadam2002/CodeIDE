@@ -1,0 +1,146 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: black;
+  color: #fff;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+.input_box{
+  width: 100%;
+  background-color: #141414;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input_box input{
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+}
+
+.btn{
+  background-color: #00Aeef;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+.btn:hover{
+  background-color: #0086b3;
+}
+
+.navbar {
+  background-color:  #141414 !important; 
+  transition: background-color 0.3s ease; 
+}
+
+.grid{
+  display: flex !important ;
+  flex-wrap: wrap !important;
+  gap: 10px;
+}
+
+.tabs .tab{
+  background-color: #c2c1c1;
+  color: #000;
+}
+
+.lightMode .btn2{
+  background-color: #c2c1c1;
+  color: #000;
+}
+
+
+/* Style for the tabs container on larger screens */
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: #1A1919;
+  height: 50px;
+  padding: 0 40px;
+}
+
+.tabs .tab {
+  background-color: rgb(199 55 55);
+  color: #fff;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Hide dropdown for larger screens */
+@media screen and (max-width: 800px) {
+  .tabs {
+    display: none; /* Hide the tabs for small screens */
+  }
+
+  .dropdown-container {
+    display: block; /* Show the dropdown for small screens */
+    width: 100%;
+    padding: 10px;
+  }
+
+  .dropdown {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .flex {
+    flex-direction: column; /* Stack editor and iframe vertically */
+  }
+
+  .left {
+    width: 100%; /* Take full width for editor */
+  }
+
+  iframe {
+    width: 100%; /* Make iframe take full width on larger screens */
+    height: 50vh; /* Limit iframe height */
+  }
+
+  /* Ensure iframe takes less than full width on smaller screens */
+  .right {
+    width: 100%; /* Make output take 100% of the width, but you can adjust the percentage as needed */
+    height: 50vh;
+    margin-top: 10px; /* Add some space between the editor and the output */
+  }
+
+  .tabs {
+    flex-direction: column; /* Stack the tabs vertically */
+  }
+
+  .tabs .tab {
+    width: 100%; /* Make tabs take full width */
+    text-align: center;
+  }
+
+  .navbar {
+    padding: 10px;
+    /* Add any other adjustments for smaller screens here */
+  }
+}
